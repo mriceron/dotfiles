@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 # Install command-line tools using Homebrew.
+cd ~ && mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
 
 # Make sure we’re using the latest Homebrew.
 brew update
@@ -26,11 +27,14 @@ brew install gnu-sed --with-default-names
 brew install bash
 brew install bash-completion2
 
-# Switch to using brew-installed bash as default shell
-if ! fgrep -q "${BREW_PREFIX}/bin/bash" /etc/shells; then
-  echo "${BREW_PREFIX}/bin/bash" | sudo tee -a /etc/shells;
-  chsh -s "${BREW_PREFIX}/bin/bash";
-fi;
+# # Switch to using brew-installed bash as default shell
+# if ! fgrep -q "${BREW_PREFIX}/bin/bash" /etc/shells; then
+#   echo "${BREW_PREFIX}/bin/bash" | sudo tee -a /etc/shells;
+#   chsh -s "${BREW_PREFIX}/bin/bash";
+# fi;
+
+# Install tmux
+brew install tmux
 
 # Install `wget` with IRI support.
 brew install wget --with-iri

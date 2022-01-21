@@ -94,6 +94,9 @@ Suggestions/improvements
 |---|
 | [Mathias Bynens](https://mathiasbynens.be/) |
 
+## SSH
+https://stackoverflow.com/questions/64043238/enter-pin-for-authenticator-issue-related-to-ssh
+
 ## Thanks to…
 
 * @ptb and [his _macOS Setup_ repository](https://github.com/ptb/mac-setup)
